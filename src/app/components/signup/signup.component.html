@@ -1,0 +1,61 @@
+<!-- signup.component.html -->
+<div class="container" style="width: 400px;margin-left: 45%;  ">
+    <h2 style="text-align: center ;padding-top: 15%; "><b>Sign Up</b></h2>
+  
+    <form #signUpform="ngForm" (ngSubmit)="submitForm()">
+      <small [class.text-danger]="msg.status==500">{{msg.message}}</small>
+  
+      <div class="form-group">
+        <label for="userName"><b>Name</b></label>
+        <input type="text" class="form-control" id="userName" name="userName" [(ngModel)]="user.userName"
+          #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched" required>
+        <small class="text-danger" [class.d-none]="userName.valid || userName.untouched">User name is required
+          field</small>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+          [(ngModel)]="user.email" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #email="ngModel"
+          [class.is-invalid]="email.invalid && email.touched" />
+        <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email id is required field</small>   -->
+        <div *ngIf="email.errors && (email.invalid && email.touched)">
+          <small class="text-danger" *ngIf="email.errors['required']">Email id is required field</small>
+          <small class="text-danger" *ngIf="email.errors['pattern']">Enter valid Email id</small>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="contact"><b>Contact</b></label>
+        <input type="number" class="form-control" id="contact" name="contact" [(ngModel)]="user.contact" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="password"><b>Password</b></label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password"
+          [(ngModel)]="user.password" required #password="ngModel"
+          [class.is-invalid]="password.invalid && password.touched" />
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required
+          field</small>
+      
+      </div>
+  
+  
+      <div class="form-group">
+        <label for="cpassword"><b>Confirm Password</b></label>
+        <input type="password" class="form-control" id="cpassword" name="cpassword" placeholder="Enter confirm password"
+          (ngModel)="user.password" required #cpassword='ngModel'
+          [class.is-invalid]="cpassword.invalid && cpassword.touched" />
+        <small class="text-danger" [class.d-none]="(cpassword.value==password.value) || cpassword.untouched">
+          Password and confirm password must be same</small>
+      </div>
+  
+      <button [disabled]="signUpform.form.invalid" type="submit" class="btn btn-info">Sign Up</button>
+    </form>
+    <br>
+    <div>
+      <a [routerLink]="['/login']">Existing User? Login here</a>
+    </div>
+  
+  
+  </div>

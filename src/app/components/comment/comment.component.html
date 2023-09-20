@@ -1,0 +1,49 @@
+<form (ngSubmit)="onsubmit()" style="margin-bottom: 0;">
+
+       <!-- <div class="form-group">
+            <label for="Topics"><b>Topic name:</b></label>
+            <input type="text" class="form-control" id="Topics" required [(ngModel)]="post.topic" name="topic" 
+            #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched" required>
+            <small class="text-danger" [class.d-none]="userName.valid || userName.untouched">Topic is required
+                field</small>
+        </div> 
+
+     
+
+       
+
+        <br>
+        <div class="form-group">
+            <label for="content"><b>
+                    <h4>Question :</h4>
+                </b></label>
+            <input type="text" class="form-control" id="content" required [(ngModel)]="post.content" name="content"
+                #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched" required>
+            <small class="text-danger" [class.d-none]="userName.valid || userName.untouched">Question is required
+                field</small>
+        </div>
+
+
+    
+
+
+
+
+        <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary">Post Question</button><br><br>
+            <button type="submit" class="btn btn-danger" routerLink="/home">Cancel</button>
+
+        </div>-->
+        <div class="post-item p-4 mb-4" style="border: 1px solid black;" *ngIf="post">
+
+            <div>
+                <h6 class="mb-3" style="text-align: left;">PostId: {{post.postId}}</h6>
+                <h6 class="mb-3" style="text-align: left;">Topic: {{ppost.topic}}</h6>
+                <h4 class="mb-4">Question: {{ppost.content}}</h4>
+                <h4 class="mb-4">Comments: {{p.comment}}</h4>
+        
+        
+            </div>
+        </div>
+    </form> 
+    

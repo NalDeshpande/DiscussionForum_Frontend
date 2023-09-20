@@ -1,0 +1,167 @@
+/* .text1{
+    margin-top: 0%;
+    margin-left: 45%;
+    margin-right: 5%;
+
+   font-size: larger;
+    
+} */
+
+/* .img-fluid
+{
+  
+    padding-top: 100px;
+    margin-left: 0%;
+   
+    
+    width: 20%;
+    height: 20%;
+    
+ } */
+
+
+
+ /* .text2{
+    margin-top: 0%;
+    margin-left: 45%;
+    margin-right: 5%;
+
+   font-size: larger;
+    
+} */
+
+.btn{
+   color: white;
+   /* background-color: green; */
+   font-weight: bolder;
+}
+h2{
+   padding: 7%;
+   padding-bottom: 0%;
+   width: 50%;
+   margin: auto;
+   font-weight: bold;
+   text-align: center;
+   text-decoration: underline;
+   font-style: italic;
+   color: green;
+}
+img{
+
+align-items: center;
+padding: 5%;
+}.btn{
+   color: white;
+   /* background-color: green; */
+   font-weight: bolder;
+}
+h2{
+   padding: 7%;
+   padding-bottom: 0%;
+   width: 50%;
+   margin: auto;
+   font-weight: bold;
+   text-align: center;
+   text-decoration: underline;
+   font-style: italic;
+   color: green;
+}
+img{
+
+align-items: center;
+padding: 5%;
+}
+
+
+
+
+h1{
+   background-color: rgb(17, 129, 139);
+}
+.btn{
+   color: white;
+   font-weight: bold;
+   font-size: large;
+
+}
+.navbar{
+   background-color: rgb(69, 26, 72);
+}
+.btn1{
+   background-color: rgb(180, 131, 131);
+   color: black;
+   font-weight: bolder;
+   text-align: center;
+}
+.btn1:hover{
+   color: rgb(10, 10, 81);
+}
+.btn:hover{
+   color: rgb(0, 0, 0);
+}
+
+.dropdown{
+   font-size: large;
+   font:bold;
+   margin-left: 20px;
+   color: rgb(54, 38, 158);
+
+}
+select{
+   display:block;
+   background-color: rgba(0,0,80,0.3);
+   border-radius: 0;
+   font-size: 16px;
+   margin:auto;
+   padding: 4px;
+   border: 0;
+   box-shadow: 0 0 12px rgba(0,0,255,0.4); 
+}
+
+
+
+
+
+
+h1{
+    background-color: rgb(17, 129, 139);
+}
+.btn{
+    color: white;
+    font-weight: bold;
+    font-size: large;
+
+}
+.navbar{
+    background-color: rgb(69, 26, 72);
+}
+.btn1{
+    background-color: rgb(180, 131, 131);
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+}
+.btn1:hover{
+    color: rgb(10, 10, 81);
+}
+.btn:hover{
+    color: rgb(0, 0, 0);
+}
+
+.dropdown{
+    font-size: large;
+    font:bold;
+    margin-left: 20px;
+    color: rgb(54, 38, 158);
+
+}
+select{
+    display:block;
+    background-color: rgba(0,0,80,0.3);
+    border-radius: 0;
+    font-size: 16px;
+    margin:auto;
+    padding: 4px;
+    border: 0;
+    box-shadow: 0 0 12px rgba(0,0,255,0.4); 
+}

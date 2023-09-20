@@ -1,0 +1,159 @@
+<div>
+    <h1 style="color: rgb(0, 0, 0); text-align: center; font-family:  Georgia, serif;"><b>DISCUSSION FORUM</b> </h1>
+</div>
+
+<nav class="navbar navbar-light  ms-auto">
+    <form class="form-inline">
+
+
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+            style="margin-right: 5px;">
+
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="/post">Search</button>
+
+
+
+
+
+    </form>
+
+    <!-- home -->
+    <a class="btn about-btn  " role="button" aria-pressed="true" routerLink="/home">Home</a>
+    <!-- post -->
+    <a class="btn about-btn    " role="button" aria-pressed="true" routerLink="/post"> All Post</a>
+    <!-- About -->
+    <a class="btn about-btn " role="button" aria-pressed="true" routerLink="/about">About</a>
+    <!-- contact us -->
+    <a class="btn about-btn    " role="button" aria-pressed="true" routerLink="/contact">Contact us</a>
+
+    <!-- <a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" routerLink="signup">Signup</a> -->
+
+    <!-- login-button -->
+
+    <a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" routerLink="/login">Logout</a>
+
+
+
+
+
+</nav>
+
+<!-- side-navbar -->
+<div style="height: 200px;width: 25%; float: left; background-color: rgb(255, 255, 255);">
+    <div
+        style="visibility: hidden; display: none; width: 100px; height: 400px; margin: 0px; float: left; position: static; inset: 85px auto auto;">
+    </div>
+    <div data-settings="{&quot;parent&quot;:&quot;#content&quot;,&quot;mind&quot;:&quot;#header&quot;,&quot;top&quot;:10,&quot;breakpoint&quot;:992} "
+        data-toggle="sticky" class="sticky" style="top: 85px;">
+        <div class="sticky-inner">
+            <a class="btn1 btn-lg btn-block btn-success rounded-0 py-4 mb-3 bg-op-6 roboto-bold" routerLink="/ask">Ask
+                Question</a>
+            <div class="bg-white mb-3">
+                <h4 class="px-3 py-4 op-5 m-0" style="background-color: rgb(234, 207, 132);">
+                    Active Topics
+                </h4>
+                <hr class="m-0">
+
+                <div class="Topics" style="background-color: rgb(212, 216, 102);">
+                    <p>&nbsp;&nbsp;Technology</p>
+                    <hr class="m-0">
+                    <p>&nbsp;&nbsp;Science</p>
+                    <hr class="m-0">
+                    <p>&nbsp;&nbsp;Fashion</p>
+                    <hr class="m-0">
+                    <p>&nbsp;&nbsp;Technology</p>
+                    <hr class="m-0">
+                    <p>&nbsp;&nbsp;Chemistry in Daily Life</p>
+                    <hr class="m-0">
+                    <p>&nbsp;&nbsp;Photography</p>
+                    <hr class="m-0">
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+<div class="container-xxl py-5" style="margin-left: 25%; ">
+    <div class="container">
+        <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s"></h1>
+        <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
+            <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                <!-- Nav items... -->
+            </ul>
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <!-- Loop through each post and create a div for each post -->
+                    <div class="post-item p-4 mb-4" style="border: 1px solid black;" *ngFor="let p of post | async">
+                        <div class="row g-4 ">
+                            <div class="col-sm-12 col-md-8 d-flex align-items-center ">
+                                <!-- <img class="flex-shrink-0 img-fluid border rounded" src="img/com-logo-1.jpg" alt="" style="width: 80px; height: 80px;"> -->
+                                <div>
+                                    <h6 class="mb-3" style="text-align: left;">PostId: {{p.postId}}</h6>
+                                    <h6 class="mb-3" style="text-align: left;">Topic: {{p.topic}}</h6>
+                                    <h4 class="mb-4">Question: {{p.content}}</h4>
+                                    <h4 class="mb-4">Comments: {{p.comment}}</h4>
+
+
+                                </div>
+
+                                <!-- <div class="post" style="margin-left: 25%; margin-top: 5px;">
+                                    <button  class="btn-primary btn-lg active"  style="color: rgb(3, 4, 2); background-color: rgb(64, 64, 239); font-size: medium; border-radius: 2px;" (click)="toggleLike()">{{ isLiked ? 'Unlike' : 'Like' }}</button>
+                                    <p>{{ likeCount }}</p>
+                                  </div>
+                            </div> -->
+
+                                <div
+                                    class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                    <div class="d-flex mb-3"
+                                        style="padding-left: 5px; padding-top: 200px; padding-right :550px;">
+                                        <button class="btn btn-light btn-square me-3"><i class="far fa-heart "
+                                                style="color:black" (click)="toggleLike()">{{ isLiked ? 'Unlike' :
+                                                'Like' }}</i></button>
+                                    </div>
+
+                                    <div>
+                                        <div class="post" style="padding-top: 2px; padding-right: 140px;">
+                                            <div class="btn-comment"
+                                                style="padding-left: 5px; padding-top: 25x; padding-right :400px;">
+                                                <button
+                                                    style="text-align: left; background-color: blue; font-size: medium;"
+                                                    (click)="postupdate(p.postId)"><b>Comment</b></button>
+                                            </div>
+                                           
+                                           
+
+
+                                        </div>
+                                    </div>
+
+
+                                    <!-- <button (click)="getAllPost(p.id)" class="btn">Detail</button> -->
+                                    <!-- </div>
+                        </div>
+                    </div>
+                    End of  loop -->
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <!-- <div class="comments" style="padding-top: 5px;">
+                                                <textarea *ngFor="let comment of comments"
+                                                    class="comment">{{ comment}}
+                                                    <button>
+                                                    (click)="addComment()"><b>Comment</b></button>
+                                                </textarea> -->
+                                            <!-- </div> -->
